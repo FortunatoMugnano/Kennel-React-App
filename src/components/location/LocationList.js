@@ -47,7 +47,7 @@ class LocationList extends Component {
                 </section>
                 <div className="container-cards">
                     {this.state.locations.map(locations =>
-                        <LocationCard key={locations.id} locations={locations} closeLocation={this.closeLocation} />)}
+                        <LocationCard key={locations.id} locations={locations} closeLocation={this.closeLocation} {...this.props} />)}
                 </div>
             </>
         )

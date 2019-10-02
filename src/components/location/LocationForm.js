@@ -5,6 +5,7 @@ import '../animal/AnimalForm.css'
 class LocationForm extends Component {
     state = {
         locationName: "",
+        imageUrl: "",
         loadingStatus: false
     };
 
@@ -22,8 +23,10 @@ class LocationForm extends Component {
             window.alert("Please input a Location Name");
         } else {
             this.setState({ loadingStatus: true });
+            const imageValue = this.state.imageUrl.replace("C:\\fakepath\\", "pictures/")
             const location = {
                 name: this.state.locationName,
+                url: imageValue
             };
 
             // Create the animal and redirect user to animal list
@@ -41,6 +44,7 @@ class LocationForm extends Component {
                         <div className="formgrid">
                             <input type="text" required onChange={this.handleFieldChange} id="locationName" placeholder="Location Name" />
                             <label htmlFor="locationName">Name</label>
+                            <input type="file" required onChange={this.handleFieldChange} id="imageUrl" name="pic" accept="pictures/" />
                         </div>
                         <div className="alignRight">
                             <button type="button" disabled={this.state.loadingStatus} onClick={this.constructNewLocation}>Submit

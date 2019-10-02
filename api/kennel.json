@@ -2,69 +2,73 @@
   "animals": [
     {
       "id": 1,
-      "name": "Doodles",
+      "name": "Bobby!!!",
       "breed": "Poodle",
-      "photo": "pictures/doodle.jpg"
+      "url": "pictures/doodle.jpg"
     },
     {
       "id": 2,
       "name": "Decker",
       "breed": "German Sheperd",
-      "photo": "./pictures/german-shepard.jpg"
+      "url": "pictures/german-shepard.jpg"
     },
     {
       "id": 3,
       "name": "Esme",
       "breed": "Pitbull",
-      "photo": "./pictures/Pitbull.jpg"
+      "url": "pictures/Pitbull.jpg"
     },
     {
       "id": 4,
       "name": "Molly",
       "breed": "Yorkie Poodle",
-      "photo": "./pictures/yorkie.jpg"
+      "url": "pictures/yorkie.jpg"
+    },
+    {
+      "name": "Pongo",
+      "breed": "dalmatian",
+      "url": "pictures/download.jpeg",
+      "id": 5
+    },
+    {
+      "name": "Pooo",
+      "breed": "puppy",
+      "url": "pictures/puppy.jpeg",
+      "id": 6
     }
   ],
   "employees": [
     {
       "id": 1,
-      "name": "Employee Number one",
-      "photo": "./pictures/employeeOne.png"
+      "name": "Vincenzo Mugnano",
+      "url": "pictures/employeeOne.png"
     },
     {
       "id": 2,
       "name": "Employee Number two",
-      "photo": "./pictures/employeeTwo.png"
+      "url": "pictures/employeeTwo.png"
     },
     {
       "id": 3,
       "name": "Employee Number three",
-      "photo": "./pictures/employeeThree.png"
-    },
-    {
-      "name": "Fortunato Mugnano",
-      "id": 4
+      "url": "pictures/employeeThree.png"
     }
   ],
   "locations": [
     {
       "id": 1,
       "name": "nashville",
-      "photo": "./pictures/nashvilleKennel.jpg"
+      "url": "pictures/nashvilleKennel.jpg"
     },
     {
       "id": 2,
       "name": "franklin",
-      "photo": "./pictures/franklinKennel.jpg"
+      "url": "pictures/franklinKennel.jpg"
     },
     {
       "id": 3,
       "name": "hendersonville",
-      "photo": "./pictures/hendersonvilleKennel.png"
-    },
-    {
-      "name": "Wegwood Huston",
-      "id": 4
+      "url": "pictures/hendersonvilleKennel.png"
     }
   ],
   "owners": [
@@ -72,18 +76,13 @@
       "id": 1,
       "name": "Fortunato Mugnano",
       "phoneNumber": 6156030510,
-      "photo": "./pictures/mugnano.jpeg"
+      "url": "pictures/mugnano.jpeg"
     },
     {
       "id": 2,
       "name": "Elizabeth Mugnano",
       "phoneNumber": 6155048954,
-      "photo": "./pictures/0.jpeg"
-    },
-    {
-      "name": "Erin Rodgers",
-      "phoneNumber": "6155677876",
-      "id": 3
+      "url": "pictures/0.jpeg"
     }
   ]
 }

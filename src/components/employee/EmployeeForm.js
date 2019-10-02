@@ -5,6 +5,7 @@ import '../animal/AnimalForm.css'
 class EmployeeForm extends Component {
     state = {
         employeeName: "",
+        imageUrl: "",
         loadingStatus: false
     };
 
@@ -22,8 +23,10 @@ class EmployeeForm extends Component {
             window.alert("Please input an Employee Name");
         } else {
             this.setState({ loadingStatus: true });
+            const imageValue = this.state.imageUrl.replace("C:\\fakepath\\", "pictures/")
             const employee = {
                 name: this.state.employeeName,
+                url: imageValue
             };
 
             // Create the animal and redirect user to animal list
@@ -41,6 +44,7 @@ class EmployeeForm extends Component {
                         <div className="formgrid">
                             <input type="text" required onChange={this.handleFieldChange} id="employeeName" placeholder="New Employee Name" />
                             <label htmlFor="employeeName">Name</label>
+                            <input type="file" required onChange={this.handleFieldChange} id="imageUrl" name="pic" accept="pictures/" />
                         </div>
                         <div className="alignRight">
                             <button type="button" disabled={this.state.loadingStatus} onClick={this.constructNewEmployee}>Submit

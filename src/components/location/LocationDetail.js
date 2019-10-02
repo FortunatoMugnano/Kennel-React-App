@@ -9,7 +9,8 @@ class LocationDetail extends Component {
     state = {
         name: "",
         photo: "",
-        loadingStatus: true
+        loadingStatus: true,
+        imageUrl: ""
     }
 
     handleDelete = () => {
@@ -25,17 +26,20 @@ class LocationDetail extends Component {
                 this.setState({
                     name: locations.name,
                     photo: locations.photo,
+                    imageUrl: locations.url,
                     loadingStatus: false
                 });
             });
     }
 
     render() {
+        if (this.state.loadingStatus)
+         { return <p>Loading.. </p> }
         return (
             <div className="card">
                 <div className="card-content">
                     <picture>
-                        <img src={this.state.photo} alt="location" />
+                        <img src={require(`../${this.state.imageUrl}`)} alt="location" />
                     </picture>
                     <h3>Location Name: {firstLetterCase(this.state.name)}</h3>
                     <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Close this location</button>

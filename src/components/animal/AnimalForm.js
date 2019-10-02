@@ -6,7 +6,9 @@ class AnimalForm extends Component {
     state = {
         animalName: "",
         breed: "",
+        imageUrl: "",
         loadingStatus: false,
+
     };
 
     handleFieldChange = evt => {
@@ -23,18 +25,21 @@ class AnimalForm extends Component {
             window.alert("Please input an animal name and breed");
         } else {
             this.setState({ loadingStatus: true });
+            const imageValue = this.state.imageUrl.replace("C:\\fakepath\\", "pictures/")
             const animal = {
                 name: this.state.animalName,
                 breed: this.state.breed,
+                url: imageValue
             };
 
             // Create the animal and redirect user to animal list
             AnimalManager.post(animal)
-                .then(() => this.props.history.push("/animals"));
+                .then(() => this.props.history.push("/animals"))
         }
     };
 
     render() {
+
 
         return (
             <>
@@ -45,6 +50,7 @@ class AnimalForm extends Component {
                             <label htmlFor="animalName">Name</label>
                             <input type="text" required onChange={this.handleFieldChange} id="breed" placeholder="Breed" />
                             <label htmlFor="breed">Breed</label>
+                            <input type="file" required onChange={this.handleFieldChange} id="imageUrl" name="pic" accept="pictures/" />
                         </div>
                         <div className="alignRight">
                             <button type="button" disabled={this.state.loadingStatus} onClick={this.constructNewAnimal}>Submit

@@ -6,6 +6,7 @@ class OwnerForm extends Component {
     state = {
         ownerName: "",
         ownerPhoneNumber: "",
+        imageUrl: "",
         loadingStatus: false
     };
 
@@ -23,9 +24,11 @@ class OwnerForm extends Component {
             window.alert("Please input an Owner Name or the Telephone Number");
         } else {
             this.setState({ loadingStatus: true });
+            const imageValue = this.state.imageUrl.replace("C:\\fakepath\\", "pictures/")
             const owner = {
                 name: this.state.ownerName,
-                phoneNumber: this.state.ownerPhoneNumber
+                phoneNumber: this.state.ownerPhoneNumber,
+                url: imageValue
             };
 
             // Create the animal and redirect user to animal list
@@ -45,6 +48,7 @@ class OwnerForm extends Component {
                             <label htmlFor="ownerName">Name</label>
                             <input type="text" required onChange={this.handleFieldChange} id="ownerPhoneNumber" placeholder="Add Telephone Number" />
                             <label htmlFor="ownerPhoneNumber">Telephone Number</label>
+                            <input type="file" required onChange={this.handleFieldChange} id="imageUrl" name="pic" accept="pictures/" />
                         </div>
                         <div className="alignRight">
                             <button type="button" disabled={this.state.loadingStatus} onClick={this.constructNewOwner}>Submit
