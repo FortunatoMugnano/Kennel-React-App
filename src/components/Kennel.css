@@ -36,7 +36,8 @@ address {
 img {
   display: block;
   border: 0;
-  height: auto;
+  height: 400px;
+  width: 450px;
 }
 
 .section-content {

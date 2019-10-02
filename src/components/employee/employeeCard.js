@@ -7,28 +7,11 @@ class EmployeeCard extends Component {
             <div className="card">
                 <div className="card-content">
                     <picture>
-                        <img src={require(`./employeeOne.png`)} alt="employeeOne" />
+                        <img src={this.props.employees.photo} alt="employeeOne" />
                     </picture>
-                    <h3>Employee Name:<span className="card-location">Employee One</span></h3>
+                    <h3>Employee Name:<span className="card-location">{this.props.employees.name}</span></h3>
                     <p>Employee in the Nashville Kennel</p>
-                </div>
-            </div>
-            <div className="card">
-                <div className="card-content">
-                    <picture>
-                        <img src={require(`./employeeTwo.png`)} alt="employeeTwo" />
-                    </picture>
-                    <h3>Employee Name:<span className="card-location">Employee Two</span></h3>
-                    <p>Employee in the Franklin Kennel</p>
-                </div>
-            </div>
-            <div className="card">
-                <div className="card-content">
-                    <picture>
-                        <img src={require(`./employeeThree.png`)} alt="employeeThree" />
-                    </picture>
-                    <h3>Employee Name:<span className="card-location">Employee Three</span></h3>
-                    <p>Employee in the Hendersonville Kennel</p>
+                    <button type="button" onClick={() => this.props.fireEmployee(this.props.employees.id)}>Fire Employee</button>
                 </div>
             </div>
         </section>

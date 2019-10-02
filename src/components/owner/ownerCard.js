@@ -7,10 +7,12 @@ class OwnerCard extends Component {
                 <div className="card">
                     <div className="card-content">
                         <picture>
-                            <img src={require(`./mugnano.jpeg`)} alt="owner" />
+                            <img src={this.props.owners.photo} alt="owner" />
                         </picture>
-                        <h3>Owner Name:<span className="card-location">Mr. Mugnano Fortunato</span></h3>
-                        <p>Adopted from the Nashville Kennel</p>
+                        <h3>Owner Name:<span className="card-location">{this.props.owners.name}</span></h3>
+                        <p>Adopter from the Nashville Kennel</p>
+                        <p>Telephone Number: {this.props.owners.phoneNumber}</p>
+                        <button type="button" onClick={() => this.props.removeOwner(this.props.owners.id)}>Remove this Owner</button>
                     </div>
                 </div>
             </section>)

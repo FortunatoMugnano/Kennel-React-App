@@ -1,8 +1,89 @@
 {
-    "animals": [
-        { "id": 1, "name": "Doodles", "breed": "Poodle"},
-        { "id": 2, "name": "Decker", "breed": "German Sheperd" },
-        { "id": 3, "name": "Esme", "breed": "Pitbull" },
-        { "id": 4, "name": "Molly", "breed": "Yorkie Poodle" }
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "photo": "pictures/doodle.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Sheperd",
+      "photo": "./pictures/german-shepard.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Esme",
+      "breed": "Pitbull",
+      "photo": "./pictures/Pitbull.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Molly",
+      "breed": "Yorkie Poodle",
+      "photo": "./pictures/yorkie.jpg"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Employee Number one",
+      "photo": "./pictures/employeeOne.png"
+    },
+    {
+      "id": 2,
+      "name": "Employee Number two",
+      "photo": "./pictures/employeeTwo.png"
+    },
+    {
+      "id": 3,
+      "name": "Employee Number three",
+      "photo": "./pictures/employeeThree.png"
+    },
+    {
+      "name": "Fortunato Mugnano",
+      "id": 4
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "nashville",
+      "photo": "./pictures/nashvilleKennel.jpg"
+    },
+    {
+      "id": 2,
+      "name": "franklin",
+      "photo": "./pictures/franklinKennel.jpg"
+    },
+    {
+      "id": 3,
+      "name": "hendersonville",
+      "photo": "./pictures/hendersonvilleKennel.png"
+    },
+    {
+      "name": "Wegwood Huston",
+      "id": 4
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Fortunato Mugnano",
+      "phoneNumber": 6156030510,
+      "photo": "./pictures/mugnano.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Elizabeth Mugnano",
+      "phoneNumber": 6155048954,
+      "photo": "./pictures/0.jpeg"
+    },
+    {
+      "name": "Erin Rodgers",
+      "phoneNumber": "6155677876",
+      "id": 3
+    }
+  ]
 }
