@@ -21,13 +21,9 @@ class Login extends Component {
             For now, just store the email and password that
             the customer enters into local storage.
         */
-        localStorage.setItem(
-            "credentials",
-            JSON.stringify({
-                email: this.state.email,
-                password: this.state.password
-            })
-        )
+        evt.preventDefault()
+        let credentials = { email: this.state.email, password: this.state.password }
+        this.props.setUser(credentials);
         this.props.history.push("/");
 
     }
@@ -41,15 +37,15 @@ class Login extends Component {
                         <input onChange={this.handleFieldChange} type="email"
                             id="email"
                             placeholder="Email address"
-                            required="" autoFocus="" />
+                            required="" autoFocus="" autoComplete="off" />
                         <label htmlFor="inputEmail">Email address</label>
 
                         <input onChange={this.handleFieldChange} type="password"
                             id="password"
                             placeholder="Password"
-                            required="" />
+                            required="" autoComplete="off" />
                         <label htmlFor="inputPassword">Password</label>
-                        <input type="checkbox" id="rememberMe"/>Remember me
+                        <input type="checkbox" id="rememberMe" />Remember me
                     </div>
                     <button type="submit">
                         Sign in

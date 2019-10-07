@@ -49,3 +49,6 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+body {
+  background-color:  #829FD9;
+}

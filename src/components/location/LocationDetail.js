@@ -4,13 +4,15 @@ import '../animal/AnimalDetail.css'
 import {firstLetterCase} from '../../modules/helpers'
 
 
+
 class LocationDetail extends Component {
 
     state = {
         name: "",
         photo: "",
         loadingStatus: true,
-        imageUrl: ""
+        imageUrl: "",
+
     }
 
     handleDelete = () => {

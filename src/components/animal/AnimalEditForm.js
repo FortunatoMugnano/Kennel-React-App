@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import AnimalManager from "../../modules/AnimalManager"
 import "./AnimalForm.css"
+import employeeManager from "../../modules/employeeManager"
 
 class AnimalEditForm extends Component {
     //set the initial state
@@ -8,7 +9,9 @@ class AnimalEditForm extends Component {
         animalName: "",
         breed: "",
         loadingStatus: true,
-        imageUrl: ""
+        imageUrl: "",
+        employeeId: "",
+        employees: []
     };
 
     handleFieldChange = evt => {
@@ -25,7 +28,8 @@ class AnimalEditForm extends Component {
             id: this.props.match.params.animalId,
             name: this.state.animalName,
             breed: this.state.breed,
-            url: imageValue
+            url: imageValue,
+            employeeId: parseInt(this.state.employeeId)
         };
 
         AnimalManager.update(editedAnimal)
@@ -33,15 +37,21 @@ class AnimalEditForm extends Component {
     }
 
     componentDidMount() {
-        AnimalManager.get(this.props.match.params.animalId)
-            .then(animal => {
-                this.setState({
-                    animalName: animal.name,
-                    breed: animal.breed,
-                    imageUrl: animal.url,
-                    loadingStatus: false,
-                });
-            });
+        employeeManager.getAll()
+            .then(allEmployees => {
+                AnimalManager.get(this.props.match.params.animalId)
+                    .then(animal => {
+                        this.setState({
+                            animalName: animal.name,
+                            breed: animal.breed,
+                            imageUrl: animal.url,
+                            employeeId: animal.employeeId,
+                            employees: allEmployees,
+                            loadingStatus: false,
+
+                        })
+                    })
+            })
     }
 
     render() {
@@ -69,9 +79,22 @@ class AnimalEditForm extends Component {
                                 value={this.state.breed}
                             />
                             <label htmlFor="breed">Breed</label>
-                            <input type="file" className="form-control" onChange={this.handleFieldChange} id="imageUrl" name="pic" />
-                            <label htmlFor="animalPicture">Picture</label>
+                            <select
+                                className="form-control"
+                                id="employeeId"
+                                value={this.state.employeeId}
+                                onChange={this.handleFieldChange}
+                            >
+                                {this.state.employees.map(employee =>
+                                    <option key={employee.id} value={employee.id}>
+                                        {employee.name}
+                                    </option>
+                                )}
+                            </select>
                         </div>
+                        <input type="file" className="form-control" onChange={this.handleFieldChange} id="imageUrl" name="pic" />
+                        <label htmlFor="animalPicture">Picture</label>
+
                         <div className="alignRight">
                             <button
                                 type="button" disabled={this.state.loadingStatus}

@@ -2,56 +2,77 @@
   "animals": [
     {
       "id": 1,
-      "name": "Bobby!!!",
+      "name": "Bobby",
       "breed": "Poodle",
-      "url": "pictures/doodle.jpg"
+      "url": "pictures/doodle.jpg",
+      "employeeId": 2
     },
     {
       "id": 2,
-      "name": "Decker",
-      "breed": "German Sheperd",
-      "url": "pictures/german-shepard.jpg"
+      "name": "Decker!!!",
+      "breed": "German Sheperd!!!",
+      "url": "pictures/german-shepard.jpg",
+      "employeeId": 1
     },
     {
       "id": 3,
       "name": "Esme",
       "breed": "Pitbull",
-      "url": "pictures/Pitbull.jpg"
-    },
-    {
-      "id": 4,
-      "name": "Molly",
-      "breed": "Yorkie Poodle",
-      "url": "pictures/yorkie.jpg"
-    },
-    {
-      "name": "Pongo",
-      "breed": "dalmatian",
-      "url": "pictures/download.jpeg",
-      "id": 5
+      "url": "pictures/Pitbull.jpg",
+      "employeeId": 1
     },
     {
       "name": "Pooo",
       "breed": "puppy",
       "url": "pictures/puppy.jpeg",
-      "id": 6
+      "id": 6,
+      "employeeId": 1
+    },
+    {
+      "name": "Pongo!!!",
+      "breed": "Dalmatian",
+      "url": "pictures/download.jpeg",
+      "id": 7,
+      "employeeId": 1
+    },
+    {
+      "name": "bobby",
+      "breed": "Yorkie",
+      "url": "pictures/dog.svg",
+      "employeeId": 3,
+      "id": 11
+    },
+    {
+      "name": "Bobby",
+      "breed": "poodle",
+      "url": "pictures/dog.svg",
+      "employeeId": 1,
+      "id": 12
     }
   ],
   "employees": [
     {
       "id": 1,
       "name": "Vincenzo Mugnano",
-      "url": "pictures/employeeOne.png"
+      "url": "pictures/employeeOne.png",
+      "locationId": 1
     },
     {
       "id": 2,
-      "name": "Employee Number two",
-      "url": "pictures/employeeTwo.png"
+      "name": "Giancarlo Moscato",
+      "url": "pictures/employeeTwo.png",
+      "locationId": 2
     },
     {
       "id": 3,
-      "name": "Employee Number three",
-      "url": "pictures/employeeThree.png"
+      "name": "Giuseppe Moscato",
+      "url": "pictures/employeeThree.png",
+      "locationId": 3
+    },
+    {
+      "name": "Cameron Mccahill",
+      "url": "pictures/employeeOne.png",
+      "id": 4
     }
   ],
   "locations": [
